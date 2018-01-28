@@ -9,7 +9,7 @@ const fs = require('fs-extra'),
   md = require('markdown-it')(),
   minify = require('html-minifier').minify;
 var Prism = require('prismjs');
-  // Load helper functions (these are from existing snippets in 30 seconds of code!)
+// Load helper functions (these are from existing snippets in 30 seconds of code!)
 const isTravisCI = () => 'TRAVIS' in process.env && 'CI' in process.env;
 const unescapeHTML = str =>
   str.replace(
