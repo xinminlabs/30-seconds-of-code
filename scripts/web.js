@@ -19,7 +19,7 @@ const unescapeHTML = str =>
         '&amp;': '&',
         '&lt;': '<',
         '&gt;': '>',
-        '&#39;': "'",
+        '&#39;': '\'',
         '&quot;': '"'
       }[tag] || tag)
   );
@@ -118,12 +118,12 @@ try {
     .sort((a, b) => a.localeCompare(b))) {
     if (capitalize(tag, true) == 'Uncategorized') {
       uncategorizedOutput +=
-        `<h3>` +
+        '<h3>' +
         md
           .render(`${capitalize(tag, true)}\n`)
           .replace(/<p>/g, '')
           .replace(/<\/p>/g, '') +
-        `</h3>`;
+        '</h3>';
       for (let taggedSnippet of Object.entries(tagDbData).filter(v => v[1][0] === tag))
         uncategorizedOutput += md
           .render(`[${taggedSnippet[0]}](#${taggedSnippet[0].toLowerCase()})\n`)
@@ -133,12 +133,12 @@ try {
       uncategorizedOutput += '\n';
     } else {
       output +=
-        `<h3>` +
+        '<h3>' +
         md
           .render(`${capitalize(tag, true)}\n`)
           .replace(/<p>/g, '')
           .replace(/<\/p>/g, '') +
-        `</h3>`;
+        '</h3>';
       for (let taggedSnippet of Object.entries(tagDbData).filter(v => v[1][0] === tag))
         output += md
           .render(`[${taggedSnippet[0]}](#${taggedSnippet[0].toLowerCase()})\n`)
@@ -149,8 +149,8 @@ try {
     }
   }
   output += uncategorizedOutput;
-  output += `</nav><main class="col-sm-12 col-md-8 col-lg-9" style="height: 100%;overflow-y: auto; background: #eceef2; padding: 0;">`;
-  output += `<a id="top">&nbsp;</a>`;
+  output += '</nav><main class="col-sm-12 col-md-8 col-lg-9" style="height: 100%;overflow-y: auto; background: #eceef2; padding: 0;">';
+  output += '<a id="top">&nbsp;</a>';
   uncategorizedOutput = '';
   // Loop over tags and snippets to create the list of snippets
   for (let tag of [...new Set(Object.entries(tagDbData).map(t => t[1][0]))]

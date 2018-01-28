@@ -4,9 +4,9 @@
 	(global._30s = factory());
 }(this, (function () { 'use strict';
 
-var fs = typeof require !== "undefined" && require('fs');
+var fs = typeof require !== 'undefined' && require('fs');
 var JSONToFile = function JSONToFile(obj, filename) {
-  return fs.writeFile(filename + ".json", JSON.stringify(obj, null, 2));
+  return fs.writeFile(filename + '.json', JSON.stringify(obj, null, 2));
 };
 
 var RGBToHex = function RGBToHex(r, g, b) {
@@ -27,7 +27,7 @@ var UUIDGeneratorBrowser = function UUIDGeneratorBrowser() {
   });
 };
 
-var crypto$1 = typeof require !== "undefined" && require('crypto');
+var crypto$1 = typeof require !== 'undefined' && require('crypto');
 var UUIDGeneratorNode = function UUIDGeneratorNode() {
   return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, function (c) {
     return (c ^ crypto$1.randomBytes(1)[0] & 15 >> c / 4).toString(16);
@@ -346,7 +346,7 @@ var decapitalize = function decapitalize(_ref) {
   return first.toLowerCase() + (upperRest ? rest.join('').toUpperCase() : rest.join(''));
 };
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var deepClone = function deepClone(obj) {
   var clone = Object.assign({}, obj);
@@ -424,7 +424,7 @@ var differenceWith = function differenceWith(arr, val, comp) {
 function _toConsumableArray$3(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var digitize = function digitize(n) {
-  return [].concat(_toConsumableArray$3("" + n)).map(function (i) {
+  return [].concat(_toConsumableArray$3('' + n)).map(function (i) {
     return parseInt(i);
   });
 };
@@ -471,7 +471,7 @@ var elementIsVisibleInViewport = function elementIsVisibleInViewport(el) {
     return partiallyVisible ? (top > 0 && top < innerHeight || bottom > 0 && bottom < innerHeight) && (left > 0 && left < innerWidth || right > 0 && right < innerWidth) : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
 };
 
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; }();
 
 function _toArray$2(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
@@ -512,7 +512,7 @@ var elo = function elo(_ref) {
   return ratings;
 };
 
-var _typeof$1 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$1 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var equals = function equals(a, b) {
   if (a === b) return true;
@@ -533,7 +533,7 @@ var escapeHTML = function escapeHTML(str) {
       '&': '&amp;',
       '<': '&lt;',
       '>': '&gt;',
-      "'": '&#39;',
+      '\'': '&#39;',
       '"': '&quot;'
     }[tag] || tag;
   });
@@ -764,7 +764,7 @@ var hashBrowser = function hashBrowser(val) {
   });
 };
 
-var crypto$2 = typeof require !== "undefined" && require('crypto');
+var crypto$2 = typeof require !== 'undefined' && require('crypto');
 var hashNode = function hashNode(val) {
   return new Promise(function (resolve) {
     return setTimeout(function () {
@@ -971,13 +971,13 @@ var isObject = function isObject(obj) {
   return obj === Object(obj);
 };
 
-var _typeof$2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$2 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var isObjectLike = function isObjectLike(val) {
   return val !== null && (typeof val === 'undefined' ? 'undefined' : _typeof$2(val)) === 'object';
 };
 
-var _typeof$3 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$3 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var isPlainObject = function isPlainObject(val) {
   return !!val && (typeof val === 'undefined' ? 'undefined' : _typeof$3(val)) === 'object' && val.constructor === Object;
@@ -990,19 +990,19 @@ var isPrime = function isPrime(num) {
   }return num >= 2;
 };
 
-var _typeof$4 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$4 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var isPrimitive = function isPrimitive(val) {
   return !['object', 'function'].includes(typeof val === 'undefined' ? 'undefined' : _typeof$4(val)) || val === null;
 };
 
-var _typeof$5 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$5 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var isPromiseLike = function isPromiseLike(obj) {
   return obj !== null && ((typeof obj === 'undefined' ? 'undefined' : _typeof$5(obj)) === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
 };
 
-var _slicedToArray$1 = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+var _slicedToArray$1 = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; }();
 
 var isSorted = function isSorted(arr) {
   var direction = arr[0] > arr[1] ? -1 : 1;
@@ -1041,7 +1041,7 @@ var isString = function isString(val) {
   return typeof val === 'string';
 };
 
-var _typeof$6 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$6 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var isSymbol = function isSymbol(val) {
   return (typeof val === 'undefined' ? 'undefined' : _typeof$6(val)) === 'symbol';
@@ -1340,7 +1340,7 @@ var once = function once(fn) {
   };
 };
 
-var _slicedToArray$2 = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+var _slicedToArray$2 = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; }();
 
 function _toConsumableArray$12(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -1457,7 +1457,7 @@ var pipeFunctions = function pipeFunctions() {
   });
 };
 
-var _typeof$7 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$7 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var pluralize = function pluralize(val, word) {
   var plural = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : word + 's';
@@ -1605,7 +1605,7 @@ var randomNumberInRange = function randomNumberInRange(min, max) {
   return Math.random() * (max - min) + min;
 };
 
-var fs$1 = typeof require !== "undefined" && require('fs');
+var fs$1 = typeof require !== 'undefined' && require('fs');
 var readFileLines = function readFileLines(filename) {
   return fs$1.readFileSync(filename).toString('UTF8').split('\n');
 };
@@ -1658,7 +1658,7 @@ var reverseString = function reverseString(str) {
 
 var round = function round(n) {
   var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  return Number(Math.round(n + "e" + decimals) + "e-" + decimals);
+  return Number(Math.round(n + 'e' + decimals) + 'e-' + decimals);
 };
 
 var runAsync = function runAsync(fn) {
@@ -1722,7 +1722,7 @@ var sdbm = function sdbm(str) {
 };
 
 var serializeCookie = function serializeCookie(name, val) {
-  return encodeURIComponent(name) + "=" + encodeURIComponent(val);
+  return encodeURIComponent(name) + '=' + encodeURIComponent(val);
 };
 
 var setStyle = function setStyle(el, ruleName, val) {
@@ -1765,7 +1765,7 @@ var similarity = function similarity(arr, values) {
   });
 };
 
-var _typeof$8 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof$8 = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; };
 
 var size = function size(val) {
   return Array.isArray(val) ? val.length : val && (typeof val === 'undefined' ? 'undefined' : _typeof$8(val)) === 'object' ? val.size || val.length || Object.keys(val).length : typeof val === 'string' ? new Blob([val]).size : 0;
@@ -2081,7 +2081,7 @@ var unescapeHTML = function unescapeHTML(str) {
       '&amp;': '&',
       '&lt;': '<',
       '&gt;': '>',
-      '&#39;': "'",
+      '&#39;': '\'',
       '&quot;': '"'
     }[tag] || tag;
   });
@@ -2129,7 +2129,7 @@ var uniqueElements = function uniqueElements(arr) {
 };
 
 var untildify = function untildify(str) {
-  return str.replace(/^~($|\/|\\)/, (typeof require !== "undefined" && require('os').homedir()) + "$1");
+  return str.replace(/^~($|\/|\\)/, (typeof require !== 'undefined' && require('os').homedir()) + '$1');
 };
 
 function _toConsumableArray$23(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
