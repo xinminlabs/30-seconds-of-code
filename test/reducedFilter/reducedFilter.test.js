@@ -17,7 +17,7 @@ test('Testing reducedFilter', (t) => {
       age: 50
     }
     ];
-    t.deepEqual(reducedFilter(data, ['id', 'name'], item => item.age > 24), [{ id: 2, name: 'mike'}], "Filter an array of objects based on a condition while also filtering out unspecified keys.");
+    t.deepEqual(reducedFilter(data, ['id', 'name'], item => item.age > 24), [{ id: 2, name: 'mike'}], 'Filter an array of objects based on a condition while also filtering out unspecified keys.');
   //t.deepEqual(reducedFilter(args..), 'Expected');
   //t.equal(reducedFilter(args..), 'Expected');
   //t.false(reducedFilter(args..), 'Expected');

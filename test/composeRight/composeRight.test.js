@@ -8,7 +8,7 @@ test('Testing composeRight', (t) => {
   const add = (x, y) => x + y;
   const square = x => x * x;
   const addAndSquare = composeRight(add, square);
-  t.equal(addAndSquare(1, 2), 9, "Performs left-to-right function composition");
+  t.equal(addAndSquare(1, 2), 9, 'Performs left-to-right function composition');
   //t.deepEqual(composeRight(args..), 'Expected');
   //t.equal(composeRight(args..), 'Expected');
   //t.false(composeRight(args..), 'Expected');

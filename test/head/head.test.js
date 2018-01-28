@@ -6,7 +6,7 @@ test('Testing head', (t) => {
   //Please go to https://github.com/substack/tape
   t.true(typeof head === 'function', 'head is a Function');
   t.true(head({ a: 1234}) === undefined, 'head({ a: 1234}) returns undefined');
-  t.equal(head([1, 2, 3]), 1, "head([1, 2, 3]) returns 1");
+  t.equal(head([1, 2, 3]), 1, 'head([1, 2, 3]) returns 1');
   t.equal(head({ 0: false}), false, 'head({ 0: false}) returns false');
   t.equal(head('String'), 'S', 'head(String) returns S');
   t.throws(() => head(null), 'head(null) throws an Error');

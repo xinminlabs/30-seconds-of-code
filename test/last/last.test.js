@@ -6,7 +6,7 @@ test('Testing last', (t) => {
   //Please go to https://github.com/substack/tape
   t.true(typeof last === 'function', 'last is a Function');
   t.true(last({ a: 1234}) === undefined, 'last({ a: 1234}) returns undefined');
-  t.equal(last([1, 2, 3]), 3, "last([1, 2, 3]) returns 3");
+  t.equal(last([1, 2, 3]), 3, 'last([1, 2, 3]) returns 3');
   t.equal(last({ 0: false}), undefined, 'last({ 0: false}) returns undefined');
   t.equal(last('String'), 'g', 'last(String) returns g');
   t.throws(() => last(null), 'last(null) throws an Error');
