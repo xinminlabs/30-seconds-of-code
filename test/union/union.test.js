@@ -5,10 +5,10 @@ test('Testing union', (t) => {
   //For more information on all the methods supported by tape
   //Please go to https://github.com/substack/tape
   t.true(typeof union === 'function', 'union is a Function');
-  t.deepEqual(union([1, 2, 3], [4, 3, 2]), [1, 2, 3, 4], "union([1, 2, 3], [4, 3, 2]) returns [1, 2, 3, 4]");
-  t.deepEqual(union('str', 'asd'), [ 's', 't', 'r', 'a', 'd' ], "union('str', 'asd') returns [ 's', 't', 'r', 'a', 'd' ]");
-  t.deepEqual(union([[], {}], [1, 2, 3]), [[], {}, 1, 2, 3], "union([[], {}], [1, 2, 3]) returns [[], {}, 1, 2, 3]");
-  t.deepEqual(union([], []), [], "union([], []) returns []");
+  t.deepEqual(union([1, 2, 3], [4, 3, 2]), [1, 2, 3, 4], 'union([1, 2, 3], [4, 3, 2]) returns [1, 2, 3, 4]');
+  t.deepEqual(union('str', 'asd'), [ 's', 't', 'r', 'a', 'd' ], 'union(\'str\', \'asd\') returns [ \'s\', \'t\', \'r\', \'a\', \'d\' ]');
+  t.deepEqual(union([[], {}], [1, 2, 3]), [[], {}, 1, 2, 3], 'union([[], {}], [1, 2, 3]) returns [[], {}, 1, 2, 3]');
+  t.deepEqual(union([], []), [], 'union([], []) returns []');
   t.throws(() => union(), 'union() throws an error');
   t.throws(() => union(true, 'str'), 'union(true, str) throws an error');
   t.throws(() => union('false', true), 'union(false, true) throws an error');

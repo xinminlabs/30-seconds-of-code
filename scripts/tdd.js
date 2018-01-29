@@ -65,17 +65,17 @@ snippetFiles
 
     // Export template for snippetName.test.js which generates a example test & other information
     const exportTest = [
-      `const test = require('tape');`,
+      'const test = require(\'tape\');',
       `const ${fileName} = require('./${fileName}.js');`,
       `\ntest('Testing ${fileName}', (t) => {`,
-      `  //For more information on all the methods supported by tape\n  //Please go to https://github.com/substack/tape`,
+      '  //For more information on all the methods supported by tape\n  //Please go to https://github.com/substack/tape',
       `  t.true(typeof ${fileName} === 'function', '${fileName} is a Function');`,
       `  //t.deepEqual(${fileName}(args..), 'Expected');`,
       `  //t.equal(${fileName}(args..), 'Expected');`,
       `  //t.false(${fileName}(args..), 'Expected');`,
       `  //t.throws(${fileName}(args..), 'Expected');`,
-      `  t.end();`,
-      `});`
+      '  t.end();',
+      '});'
     ].join('\n');
 
     // Write/Update exportFile which is snippetName.js in respective dir
