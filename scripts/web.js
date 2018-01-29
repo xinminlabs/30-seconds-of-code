@@ -9,7 +9,7 @@ const fs = require('fs-extra'),
   md = require('markdown-it')(),
   minify = require('html-minifier').minify;
 var Prism = require('prismjs');
-  // Load helper functions (these are from existing snippets in 30 seconds of code!)
+// Load helper functions (these are from existing snippets in 30 seconds of code!)
 const isTravisCI = () => 'TRAVIS' in process.env && 'CI' in process.env;
 const unescapeHTML = str =>
   str.replace(
@@ -197,7 +197,7 @@ try {
   do {
     const punctuationRegex = /<span class="token punctuation">([^\0<]*?)<\/span>([\n\r\s]*)<span class="token punctuation">([^\0]*?)<\/span>/gm;
     output = output.replace(punctuationRegex,
-      (match, p1, p2, p3)  => `<span class="token punctuation">${p1}${p2}${p3}</span>`
+      (match, p1, p2, p3) => `<span class="token punctuation">${p1}${p2}${p3}</span>`
     );
     count = 0;
     while (punctuationRegex.exec(output) !== null) {
@@ -208,7 +208,7 @@ try {
   do {
     const operatorRegex = /<span class="token operator">([^\0<]*?)<\/span>([\n\r\s]*)<span class="token operator">([^\0]*?)<\/span>/gm;
     output = output.replace(operatorRegex,
-      (match, p1, p2, p3)  => `<span class="token operator">${p1}${p2}${p3}</span>`
+      (match, p1, p2, p3) => `<span class="token operator">${p1}${p2}${p3}</span>`
     );
     count = 0;
     while (operatorRegex.exec(output) !== null) {
@@ -219,7 +219,7 @@ try {
   do {
     const keyWordRegex = /<span class="token keyword">([^\0<]*?)<\/span>([\n\r\s]*)<span class="token keyword">([^\0]*?)<\/span>/gm;
     output = output.replace(keyWordRegex,
-      (match, p1, p2, p3)  => `<span class="token keyword">${p1}${p2}${p3}</span>`
+      (match, p1, p2, p3) => `<span class="token keyword">${p1}${p2}${p3}</span>`
     );
     count = 0;
     while (keyWordRegex.exec(output) !== null) {
