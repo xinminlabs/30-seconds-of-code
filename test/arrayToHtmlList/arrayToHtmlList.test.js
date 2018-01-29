@@ -6,7 +6,7 @@ const listID = 'myListID';
 const dom = new JSDOM(`<ul id="${listID}"></ul>`);
 // Override snippet to use jsdom
 const arrayToHtmlList = (arr, listID) =>
-arr.map(item => (dom.window.document.querySelector('#' + listID).innerHTML += `<li>${item}</li>`));
+  arr.map(item => (dom.window.document.querySelector('#' + listID).innerHTML += `<li>${item}</li>`));
 
 test('Testing arrayToHtmlList', (t) => {
   //For more information on all the methods supported by tape
