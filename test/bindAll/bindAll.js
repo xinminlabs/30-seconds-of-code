@@ -5,4 +5,4 @@ fn =>
 return fn.apply(obj);
 })
 );
-module.exports = bindAll
+module.exports = bindAll;

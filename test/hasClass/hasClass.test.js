@@ -7,7 +7,7 @@ test('Testing hasClass', (t) => {
 	//For more information on all the methods supported by tape
 	//Please go to https://github.com/substack/tape
 	t.true(typeof hasClass === 'function', 'hasClass is a Function');
-	const className = 'container'
+	const className = 'container';
 	const dom = new JSDOM(`
 	<p class="${className}">Some text</p>
 	`);
